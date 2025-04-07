@@ -1,0 +1,14 @@
+{
+  "name": "TRANSMISSION",
+  "short_name": "SIGNAL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a12",
+  "theme_color": "#ff0033",
+  "icons": [{
+    "src": "assets/icon-192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "description": "A signal that cuts through the noise."
+}
