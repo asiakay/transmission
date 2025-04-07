@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSMISSION // The Signal That Cuts Through</title>
+    <style>
+        :root {
+            --signal-red: #ff0033;
+            --deep-space: #0a0a12;
+            --static-gray: #222;
+            --signal-teal: #00ffcc;
+        }
+        
+        @font-face {
+            font-family: 'NeueMachina';
+            src: url('https://fonts.cdnfonts.com/css/neue-machina') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            background-color: var(--deep-space);
+            color: white;
+            font-family: 'NeueMachina', monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .glitch-container {
+            position: relative;
+            width: 100vw;
+            min-height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(255, 0, 51, 0.1) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, var(--deep-space) 0px, var(--deep-space) 2px, var(--static-gray) 2px, var(--static-gray) 4px);
+        }
+        
+        .signal-header {
+            position: relative;
+            margin-bottom: 3rem;
+            animation: text-glitch 8s infinite alternate;
+        }
+        
+        .signal-title {
+            font-size: clamp(2rem, 8vw, 5rem);
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.05em;
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: var(--signal-red);
+            text-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
+        }
+        
+        .signal-subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-top: 0.5rem;
+            color: var(--signal-teal);
+        }
+        
+        .manifesto {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .manifesto-section {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .manifesto-section::before {
+            content: "//";
+            color: var(--signal-teal);
+            position: absolute;
+            left: -2rem;
+        }
+        
+        h2 {
+            color: var(--signal-red);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            color: var(--signal-teal);
+            font-weight: bold;
+        }
+        
+        .cta-container {
+            margin-top: 4rem;
+            text-align: center;
+            border-top: 1px solid var(--signal-red);
+            padding-top: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--signal-teal);
+            border: 2px solid var(--signal-teal);
+            font-family: inherit;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            background: var(--signal-teal);
+            color: var(--deep-space);
+        }
+        
+        .glitch-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background: 
+                repeating-linear-gradient(0deg, transparent, transparent 1px, black 2px, black 3px),
+                repeating-linear-gradient(90deg, transparent, transparent 1px, black 2px, black 3px);
+            z-index: 10;
+            animation: static-flicker 0.2s infinite alternate;
+        }
+        
+        @keyframes text-glitch {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(0); }
+            80% { transform: skewX(5deg); }
+            100% { transform: skewX(-5deg); }
+        }
+        
+        @keyframes static-flicker {
+            0% { opacity: 0.03; }
+            50% { opacity: 0.05; }
+            100% { opacity: 0.07; }
+        }
+        
+        .noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABGSURBVGhD7cExAQAwDMCg+zfd2VgJ3kD8kwQkJCRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGQ+5gK2mQIdr5Q4XwAAAABJRU5ErkJggg==');
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .transmission-meta {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 5rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .glitch-container {
+                padding: 1rem;
+            }
+            
+            .manifesto-section::before {
+                left: -1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="glitch-overlay"></div>
+    
+    <div class="glitch-container">
+        <header class="signal-header">
+            <h1 class="signal-title">TRANSMISSION</h1>
+            <p class="signal-subtitle">The Signal That Cuts Through</p>
+        </header>
+        
+        <main class="manifesto">
+            <div class="manifesto-section">
+                <h2>// SYSTEM STATUS</h2>
+                <p>The system didn't fail—<span class="highlight">it worked too well.</span> But so will we.</p>
+                <p>This is not malfunction. This is design. The static in the signal is intentional. The noise is the point.</p>
+            </div>
+            
+            <div class="manifesto-section">
+                <h2>// FREQUENCY CHECK</h2>
+                <p>We transmit on channels they can't scramble:</p>
+                <p><span class="highlight">Black joy</span> as resistance. <span class="highlight">Cultural memory</span> as infrastructure. <span class="highlight">Clarity</span> as weapon.</p>
+                <p>The algorithm feeds on chaos—we return to rhythm.</p>
+            </div>
+            
+            <div class="manifesto-section">
+                <h2>// TRANSMISSION PROTOCOL</h2>
+                <p>Not here to assimilate. Here to convert.</p>
+                <p>We package truth in <span class="highlight">poetry</span>, armor in <span class="highlight">matte textures</span>, strategy in <span class="highlight">glitch-core aesthetics</span>.</p>
+                <p>This signal outlives the moment. This signal is your <span class="highlight">legacy</span>.</p>
+            </div>
+            
+            <div class="cta-container">
+                <h2>// RECEIVE TRANSMISSION</h2>
+                <p>Join the network. Follow the frequency.</p>
+                <button class="cta-button">DOWNLOAD MANIFESTO</button>
+                <button class="cta-button">ACCESS ARCHIVE</button>
+                <button class="cta-button">TRANSMIT SIGNAL</button>
+            </div>
+            
+            <div class="transmission-meta">
+                <p>TRANSMISSION v1.0 • ENCRYPTED • NOT FOR SURVEILLANCE • LAST UPDATED [REDACTED]</p>
+                <p>REJECT THE ALGORITHM • RETURN TO TRUTH</p>
+            </div>
+        </main>
+    </div>
+    
+    <script>
+        // Add interactive glitch effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const buttons = document.querySelectorAll('.cta-button');
+            
+            // Add hover effect to buttons
+            buttons.forEach(button => {
+                button.addEventListener('mouseover', () => {
+                    body.style.animation = 'text-glitch 0.5s infinite alternate';
+                    setTimeout(() => {
+                        body.style.animation = '';
+                    }, 500);
+                });
+            });
+            
+            // Random glitch effect every 10-20 seconds
+            setInterval(() => {
+                if (Math.random() > 0.7) {
+                    body.style.animation = 'text-glitch 0.8s infinite alternate';
+                    setTimeout(() => {
+                        body.style.animation = '';
+                    }, 800);
+                }
+            }, 10000 + Math.random() * 10000);
+        });
+    </script>
+</body>
+</html>
