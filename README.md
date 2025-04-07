@@ -1,48 +1,85 @@
-# Hello website!
+# TRANSMISSION: The Signal That Cuts Through
 
-This is a basic HTML starter project you can build on however you like. No need to save. While you develop your site, your changes will happen ✨ immediately in the preview window. On the left you'll see the files that make up your site, including HTML, JavaScript, and CSS. You can upload assets like images or audio in `assets`. The rest is up to you and your imagination. 🦄
+![TRANSMISSION Header](https://example.com/transmission-header.jpg) *[Replace with actual screenshot]*
 
-_Last updated: 28 Feb 2023_
+## Overview
 
-## What's in this project?
+**TRANSMISSION** is an immersive digital experience that blends glitch-core aesthetics with radical truth-telling. This interactive manifesto delivers its message through dynamic parallax scrolling, generative glitch effects, and cyber-spiritual design elements.
 
-← `README.md`: That's this file, where you can tell people what your cool website does and how you built it.
+## Key Features
 
-← `index.html`: This is the main web page for your site. The HTML defines the structure and content of the page using _elements_. You'll see references in the HTML to the JS and CSS files. Try clicking the image in the center of the page!
+### Visual Design
+- 🌀 **Glitch-core interface** with digital noise and CRT artifacts
+- 📡 **Cyber-spiritual color palette** (signal red, deep space black, matrix teal)
+- ⚡ **Dynamic text animations** that emulate signal interference
 
-← `style.css`: CSS files add styling rules to your content. The CSS applies styles to the elements in your HTML page. The style rules also make the image move when you click it.
+### Interactive Elements
+- 🖱️ **Parallax scrolling** with 3D depth effects
+- 💥 **Hover-triggered glitch effects** on interactive elements
+- 🌌 **Floating background shapes** that create organic movement
 
-← `script.js`: If you're feeling fancy you can add interactivity to your site with JavaScript. The code in the JavaScript file runs when the page loads, and when the visitor clicks the button you can add using the code in the TODO.
+### Content Structure
+- 📡 **Transmission packet** organization (modular manifesto sections)
+- 🔒 **Encrypted terminal** aesthetic for metadata
+- 📶 **Signal strength** visual hierarchy
 
-Open each file and check out the comments (in gray) for more info.
+## Technical Details
 
-## Try this next 🏗️
+### Built With
+- HTML5/CSS3 (no external frameworks)
+- Vanilla JavaScript for interactive elements
+- CSS animations and 3D transforms
+- Responsive design (works on mobile/desktop)
 
-Take a look in `TODO.md` for next steps you can try out in your new site!
+### Parallax System
+- Three-layer depth system (background, midground, content)
+- Scroll-triggered section entrances (fade + movement)
+- Performance-optimized transforms
 
-___Want a minimal version of this project to build your own website? Check out [Blank Website](https://glitch.com/edit/#!/remix/glitch-blank-website)!___
+## Installation
 
-## Ready to share your site?
+No installation required - this is a standalone HTML file:
 
-Add these meta tags for SEO and social sharing between your page `<head></head>` tags, changing the values for your site:
+1. Download `transmission.html`
+2. Open in any modern browser
+3. Scroll to experience the parallax effects
 
+For local development:
+```bash
+# Clone repository
+git clone https://github.com/yourusername/transmission.git
 ```
-<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-<meta name="description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta name="robots" content="index,follow" />
-<meta property="og:title" content="Hello World!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-<meta property="og:description" content="A simple website, built with Glitch. Remix it to get your own."/>
-<meta property="og:image" content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"/>
-<meta name="twitter:card" content="summary" />
-```
+# Open in browser
+open index.html
 
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
+## Customization
 
-## You built this with Glitch!
+To modify the transmission:
 
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
+1. **Change content** - Edit the HTML sections in the `<main class="manifesto">` area
+2. **Adjust colors** - Modify the CSS variables in `:root`
+3. **Tweak animations** - Edit the `@keyframes` rules
+4. **Add sections** - Duplicate the `.manifesto-section` div pattern
 
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
+## Project Status
+
+Current version: **v1.0**  
+Planned enhancements:
+- [ ] Audio transmission elements
+- [ ] User-generated signal submissions
+- [ ] Encrypted message decoder
+
+## License
+
+This project is licensed under the **Anti-Capitalist Software License**:
+> You may use, modify, and distribute this work for any purpose except:
+> - Surveillance
+> - Commercial exploitation
+> - Military applications
+
+## Transmission Protocol
+
+Join the network:
+- [Follow the frequency](#)
+- [Amplify the signal](#)
+- [What's your transmission?](#)
