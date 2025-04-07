@@ -1,0 +1,20 @@
+<main>
+  <h1>// SIGNAL LOST</h1>
+  <p>You're offline. Stored transmissions:</p>
+  <ul id="cached-pages"></ul>
+</main>
+
+<script>
+// Show cached pages
+caches.open('transmission-v2').then(cache => {
+  cache.keys().then(keys => {
+    keys.forEach(request => {
+      if (request.url.endsWith('.html')) {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="${request.url}">${request.url}</a>`;
+        document.getElementById('cached-pages').appendChild(li);
+      }
+    });
+  });
+});
+</script>
