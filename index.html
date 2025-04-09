@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="TRANSMISSION: The Signal That Cuts Through">
+<meta property="og:description" content="A poetic interface. A tactical broadcast. A signal of memory and resistance.">
+<meta property="og:image" content="https://asiakay.github.io/transmission/assets/social-card.png">
+<meta property="og:url" content="https://asiakay.github.io/transmission/">
+<meta name="twitter:card" content="summary_large_image">
+
    <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="style.css">
   <title>TRANSMISSION // The Signal That Cuts Through</title>
@@ -35,6 +41,27 @@
             overflow-x: hidden;
         }
         
+.fade-container {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+ 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+      
+      
+      
         .parallax-wrapper {
             position: relative;
             height: 100vh;
@@ -291,6 +318,7 @@
     </style>
 </head>
 <body>
+  <div class="fade-container">
     <div class="noise"></div>
     <div class="glitch-overlay"></div>
     <div class="floating-shapes">
@@ -444,6 +472,6 @@
     window.scrollTo(0, 0);
   });
 </script>
-  
+  </div>
 </body>
 </html>
