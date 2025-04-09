@@ -35,6 +35,27 @@
             overflow-x: hidden;
         }
         
+.fade-container {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+ 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+      
+      
+      
         .parallax-wrapper {
             position: relative;
             height: 100vh;
@@ -291,6 +312,7 @@
     </style>
 </head>
 <body>
+  <div class="fade-container">
     <div class="noise"></div>
     <div class="glitch-overlay"></div>
     <div class="floating-shapes">
@@ -444,6 +466,6 @@
     window.scrollTo(0, 0);
   });
 </script>
-  
+  </div>
 </body>
 </html>
