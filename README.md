@@ -1,6 +1,6 @@
 # TRANSMISSION: The Signal That Cuts Through
 
-![TRANSMISSION Header](https://example.com/transmission-header.jpg) *[Replace with actual screenshot]*
+![TRANSMISSION Screenshot](/IMG_6318.gif) 
 
 ## Overview
 
@@ -47,7 +47,7 @@ No installation required - this is a standalone HTML file:
 For local development:
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/transmission.git
+git clone https://github.com/asiakay/transmission.git
 ```
 # Open in browser
 open index.html
